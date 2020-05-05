@@ -1,0 +1,12 @@
+@import "../../../../variables";
+
+.article-about {
+  @include flexbox(space-between, center, column);
+  margin-left: 10%;
+
+  .article-buttons {
+    width: 50%;
+    @include flexbox(space-between, center);
+    margin: auto;
+  }
+}

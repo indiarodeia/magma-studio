@@ -1,0 +1,26 @@
+@import "../../../variables";
+
+#vulcano1 {
+  margin-top: 10%;
+  position: absolute;
+  z-index: -5;
+}
+
+#vulcano2 {
+  margin-top: 26%;
+  position: absolute;
+  z-index: -4;
+}
+
+//Balls
+#balls1 {
+  @include balls(20%, 220px);
+  top: -8%;
+  right: 10%;
+}
+
+#balls2 {
+  @include balls(20%, 240px);
+  top: 16%;
+  left: 17%;
+}

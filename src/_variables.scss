@@ -1,0 +1,49 @@
+// COLOR VARIABLES //
+
+$grey-background: #363636;
+$grey-light: #565656;
+$orange-magma: #ff7d0a;
+
+// OTHER VARIABLES
+
+// MIXINS //
+
+@mixin flexbox($justify-content, $align-items, $flex-direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+
+@mixin font($font-family, $font-weight, $font-size, $color) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin balls($width, $max-width) {
+  position: absolute;
+  z-index: -3;
+  width: $width;
+  max-width: $max-width;
+}
+
+// FONT VARIABLES //
+
+$primary-font: "montserrat";
+
+// Font-weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 600;
+
+//Font-size
+$font-xxs: 10px;
+$font-xs: 12px;
+$font-s: 14px;
+$font-m: 16px;
+$font-l: 18px;
+$font-xl: 20px;
+$font-xxl: 22px;

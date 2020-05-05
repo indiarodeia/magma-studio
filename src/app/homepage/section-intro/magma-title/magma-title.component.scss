@@ -1,0 +1,15 @@
+@import "../../../../variables";
+
+.container {
+  @include flexbox(space-between, center, column);
+  width: 40%;
+  position: absolute;
+  top: 16%;
+
+  .magma-title {
+    @include font($primary-font, $bold, 70px, #fff);
+    max-width: 400px;
+    text-align: center;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+}

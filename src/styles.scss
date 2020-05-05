@@ -1,0 +1,130 @@
+@import "./variables";
+
+/* DEFAULT CLEANUP */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+em,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+footer,
+header,
+nav,
+section,
+main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+/* END OF DEFAULT CLEANUP */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $grey-background;
+}
+
+// BUTTONS
+
+.button {
+  @include font($primary-font, $light, $font-xs, #fff);
+  width: 120px;
+  height: 30px;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  border: solid 1px #fff;
+  border-radius: 20px;
+  background-color: transparent;
+  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transform: scale3d(1, 1, 1);
+  }
+}
+.button.auto {
+  width: auto;
+  padding: 0 4%;
+}
+
+.button-buy {
+  @include font($primary-font, $light, $font-xxs, #fff);
+  @include flexbox(center, center);
+  width: 50px;
+  height: 18px;
+  padding: 0;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background-color: $orange-magma;
+}
+//Homepage titles
+.title {
+  @include font($primary-font, $bold, 50px, #ffffff);
+}
+//text paragraph
+p {
+  @include font($primary-font, $light, 13px, #ffffff);
+  text-align: justify;
+  line-height: 20px;
+}
+
+//Buttons
+button {
+  background: transparent;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+//Links
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+//TEXT
+.artist {
+  @include font($primary-font, $regular, $font-xs, #ffffff);
+}
+.track {
+  @include font($primary-font, $light, $font-xs, #ffffff);
+}
+.album {
+  @include font($primary-font, $light, 10px, #ffffff);
+}

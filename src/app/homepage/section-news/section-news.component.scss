@@ -1,0 +1,15 @@
+@import "../../../variables";
+
+.article-news-container {
+    @include flexbox(center, flex-start);
+    margin-bottom: 10%;
+}
+
+app-article-news {
+    width: 50%;
+}
+
+app-visuals-news {
+    width: 40%;
+    height: auto;
+}

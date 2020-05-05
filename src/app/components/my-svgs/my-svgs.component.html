@@ -1,0 +1,146 @@
+<!-- IMAGE MASK HOMEPAGE -->
+<svg width="580" height="388" viewBox="0 0 580 388" fill="none" *ngIf="svgName === SvgNameEnum.IMAGE_MASK"
+    [attr.width]="width" [attr.height]="height">
+    <clipPath id="svg-img-mask">
+        <g filter="url(#filter0_d)">
+            <path
+                d="M217.941 378.208C292.189 386.089 317.628 332.545 402.821 332.545C514.04 332.545 555.598 296.055 572.241 249.862C588.883 203.669 523.884 199.729 545.991 118.602C568.099 37.4748 496.592 -14.2147 419.978 5.02394C343.363 24.2626 263.791 1.0835 202.855 41.1834C141.918 81.2833 55.3063 13.5538 18.8628 65.2897C-26.6915 129.96 57.3176 174.232 25.962 243.305C-5.39355 312.379 136.158 369.527 217.941 378.208Z"
+                stroke="black" />
+        </g>
+        <defs>
+            <filter id="filter0_d" x="0.5" y="0.500244" width="579" height="387" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+            </filter>
+        </defs>
+    </clipPath>
+</svg>
+
+<!-- MUSIC PLAYER //////////////////////////////////////////////-->
+
+<!-- VOLUME -->
+
+<svg fill="none" viewBox="0 0 24 22" *ngIf="svgName === SvgNameEnum.VOLUME" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M13.7.08a.78.78 0 00-.83.1l-7.65 6.1H1.57C.71 6.29 0 7 0 7.87v6.28c0 .87.7 1.57 1.57 1.57h3.65l7.64 6.12a.8.8 0 00.84.1c.27-.14.44-.41.44-.72V.8c0-.3-.17-.58-.44-.71zM18.12 5.44a.79.79 0 00-1.1 1.12A6.18 6.18 0 0118.85 11c0 1.69-.66 3.27-1.85 4.44a.79.79 0 001.1 1.11A7.73 7.73 0 0020.44 11c0-2.11-.82-4.09-2.31-5.56z"
+        fill="#EEE" />
+    <path
+        d="M20.34 3.23a.79.79 0 00-1.11 1.12A9.3 9.3 0 0122 11a9.3 9.3 0 01-2.77 6.65.79.79 0 001.1 1.12A10.85 10.85 0 0023.58 11c0-2.94-1.15-5.7-3.23-7.77z"
+        fill="#EEE" /></svg>
+
+<!-- MUTE -->
+
+<svg fill="none" viewBox="0 0 22 22" *ngIf="svgName === SvgNameEnum.MUTE" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M17.28.79c0-.3-.17-.58-.44-.7a.77.77 0 00-.83.09L9.05 5.72l8.23 8.24V.79zM21.77 20.66L1.34.23A.79.79 0 00.23 1.34L5.17 6.3h-.46c-.48 0-.9.22-1.2.56-.23.27-.37.63-.37 1v6.3c0 .86.7 1.56 1.57 1.56h3.65L16 21.84a.8.8 0 00.49.17.79.79 0 00.79-.79V18.4l3.36 3.37a.78.78 0 101.12-1.11z"
+        fill="#EEE" /></svg>
+
+<!-- NEXT SONG -->
+
+<svg fill="none" viewBox="0 0 16 16" *ngIf="svgName === SvgNameEnum.NEXT" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M11.34 6.51L2.44.4A1.96 1.96 0 001.39.01C.66 0 .18.6.18 1.57v12.87c0 .47.15.86.35 1.14.2.27.53.42.88.42.32 0 .69-.13 1.05-.38l8.89-6.12c.57-.4.88-.93.88-1.5s-.31-1.1-.89-1.49zM14.57 0h-.36a.9.9 0 00-.9.88V15.1c0 .48.4.88.89.88h.4c.47 0 .83-.4.83-.88V.87a.86.86 0 00-.86-.87z"
+        fill="#EEE" /></svg>
+
+<!-- PREVIOUS SONG -->
+
+<svg fill="none" viewBox="0 0 16 16" *ngIf="svgName === SvgNameEnum.PREVIOUS" [attr.width]="width"
+    [attr.height]="height">
+    <path
+        d="M4.09 9.49l8.9 6.12c.36.25.74.38 1.06.38.72 0 1.2-.6 1.2-1.56V1.56c0-.47-.14-.86-.35-1.14-.2-.27-.53-.42-.87-.42-.33 0-.7.13-1.06.38L4.08 6.5c-.57.4-.88.93-.88 1.5s.32 1.1.89 1.49zM.86 16h.37c.48 0 .9-.4.9-.88V.9a.9.9 0 00-.9-.88H.84C.36 0 0 .4 0 .88v14.24c0 .48.38.87.86.87z"
+        fill="#EEE" /></svg>
+
+<!-- PLAY SONG -->
+
+<svg fill="none" viewBox="0 0 19 22" *ngIf="svgName === SvgNameEnum.PLAY" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M17.68 10.04l-16-9.9a.92.92 0 00-1 .01c-.3.2-.5.56-.5.95v19.8c0 .4.2.75.5.95a.93.93 0 001 0l16-9.9c.31-.19.5-.55.5-.95 0-.4-.19-.76-.5-.96z"
+        fill="#EEE" /></svg>
+
+<!-- PLAY SONG WITH CIRCLE BORDER -->
+
+<svg fill="none" viewBox="0 0 42 42" *ngIf="svgName === SvgNameEnum.PLAY_CIRCLE" [attr.width]="width"
+    [attr.height]="height">
+    <circle cx="21" cy="21" r="20.5" stroke="#EEE" />
+    <g filter="url(#filter0_d)">
+        <path
+            d="M32.08 19.95L14.63 9.15a1 1 0 00-1.09.01c-.33.22-.54.61-.54 1.04v21.6c0 .43.2.82.54 1.04a1.01 1.01 0 001.08.01l17.46-10.8c.34-.22.56-.62.56-1.05 0-.43-.22-.83-.56-1.05z"
+            fill="#EEE" />
+    </g>
+    <defs>
+        <filter id="filter0_d" x="7" y="5" width="31.64" height="36" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="2" />
+            <feGaussianBlur stdDeviation="3" />
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+            <feBlend in2="BackgroundImageFix" result="effect1_dropShadow" />
+            <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+        </filter>
+    </defs>
+</svg>
+
+<!-- PAUSE SONG -->
+
+<svg fill="none" viewBox="0 0 17 20" *ngIf="svgName === SvgNameEnum.PAUSE" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M5.42 0H1.25C.56 0 0 .56 0 1.25v17.5C0 19.44.56 20 1.25 20h4.17c.69 0 1.25-.56 1.25-1.25V1.25C6.67.56 6.1 0 5.42 0zM15.42 0h-4.17C10.56 0 10 .56 10 1.25v17.5c0 .69.56 1.25 1.25 1.25h4.17c.69 0 1.25-.56 1.25-1.25V1.25C16.67.56 16.1 0 15.42 0z"
+        fill="#EEE" /></svg>
+
+<!-- REPEAT -->
+
+<svg fill="none" viewBox="0 0 16 16" *ngIf="svgName === SvgNameEnum.REPEAT" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M15.82 2.62l-3-2.5A.5.5 0 0012 .5V2H2a2 2 0 00-2 2v7.46L2 9.8V4h10v1.5a.5.5 0 00.82.38l3-2.5A.5.5 0 0016 3a.5.5 0 00-.18-.38z"
+        fill="#EEE" />
+    <path
+        d="M14 6.2V12H4v-1.5a.5.5 0 00-.82-.38l-3 2.5A.5.5 0 000 13c0 .15.06.29.18.38l3 2.5A.5.5 0 004 15.5V14h10a2 2 0 002-2V4.54L14 6.2z"
+        fill="#EEE" /></svg>
+
+<!-- SUFFLE -->
+
+<svg fill="none" viewBox="0 0 19 16" *ngIf="svgName === SvgNameEnum.SUFFLE" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M18.08 12.13l-3.43-2.86a.57.57 0 00-.94.44v1.72h-.95c-.8 0-1.52-.4-1.94-1.08l-3.7-5.92a4.54 4.54 0 00-3.88-2.15H0v2.3h3.24c.8 0 1.52.4 1.94 1.07l3.7 5.92a4.55 4.55 0 003.88 2.14h.96v1.72a.57.57 0 00.93.44L18.08 13a.57.57 0 000-.88z"
+        fill="#EEE" />
+    <path
+        d="M18.08 2.99L14.65.13a.57.57 0 00-.93.44v1.71h-.96c-1.59 0-3.04.8-3.88 2.15l-.2.34 1.34 2.15.8-1.27a2.27 2.27 0 011.94-1.08h.96V6.3a.57.57 0 00.93.43l3.43-2.85a.57.57 0 000-.88zM5.98 9.08l-.8 1.27a2.28 2.28 0 01-1.94 1.08H0v2.28h3.24c1.59 0 3.04-.8 3.88-2.14l.2-.34-1.34-2.15z"
+        fill="#EEE" /></svg>
+
+<!-- HEART / LIKE / ADD TO FAVORITES -->
+
+<svg fill="none" viewBox="0 0 18 16" *ngIf="svgName === SvgNameEnum.HEART" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M16.56 1.57A4.84 4.84 0 0012.96 0c-1.04 0-1.99.33-2.83.98-.42.32-.8.72-1.14 1.19A5.78 5.78 0 007.85.97 4.52 4.52 0 005.02 0c-1.38 0-2.66.56-3.6 1.57A5.62 5.62 0 000 5.4 6.7 6.7 0 001.78 9.8a38.03 38.03 0 004.47 4.19c.62.52 1.32 1.12 2.05 1.76a1.05 1.05 0 001.39 0c.73-.64 1.43-1.24 2.05-1.76 1.8-1.55 3.37-2.88 4.46-4.2a6.7 6.7 0 001.78-4.38c0-1.47-.5-2.84-1.42-3.83z"
+        fill="#EEE" /></svg>
+
+<!-- SHARE -->
+
+<svg fill="none" viewBox="0 0 19 16" *ngIf="svgName === SvgNameEnum.SHARE" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M12.57 9.18v4.53H2.3V3.43H5.7V1.14H1.14C.51 1.14 0 1.66 0 2.3v12.57C0 15.49.51 16 1.14 16h12.57c.64 0 1.15-.51 1.15-1.14V9.18h-2.29z"
+        fill="#EEE" />
+    <path
+        d="M18.06 3.54L13.49.11a.57.57 0 00-.91.46V2.3h-1.72a6.3 6.3 0 00-6.29 6.28.57.57 0 001.08.26l.14-.27a5.11 5.11 0 014.6-2.85h2.18v1.72a.57.57 0 00.92.46l4.57-3.43a.57.57 0 000-.92z"
+        fill="#EEE" /></svg>
+
+<!-- LIST VIEW -->
+
+<svg fill="none" viewBox="0 0 25 22" *ngIf="svgName === SvgNameEnum.LIST" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M0 0h6.12v6.12H0V.01zM8.01 0h16.42v6.1H8.01V0zM0 7.94h6.12v6.12H0V7.94zM8.01 7.93h16.42v6.11H8.01v-6.1zM0 15.88h6.12V22H0v-6.12zM8.01 15.87h16.42v6.1H8.01v-6.1z"
+        fill="#EEE" /></svg>
+
+<!-- GRID VIEW -->
+
+<svg fill="none" viewBox="0 0 22 22" *ngIf="svgName === SvgNameEnum.GRID" [attr.width]="width" [attr.height]="height">
+    <path
+        d="M13.75 8.25h-5.5v5.5h5.5v-5.5zM5.5 0H0v5.5h5.5V0zM13.75 16.5h-5.5V22h5.5v-5.5zM5.5 8.25H0v5.5h5.5v-5.5zM5.5 16.5H0V22h5.5v-5.5zM22 0h-5.5v5.5H22V0zM13.75 0h-5.5v5.5h5.5V0zM22 8.25h-5.5v5.5H22v-5.5zM22 16.5h-5.5V22H22v-5.5z"
+        fill="#EEE" /></svg>

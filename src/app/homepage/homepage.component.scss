@@ -1,0 +1,26 @@
+@import "../../variables";
+
+#section-intro,
+#section-about,
+#section-news {
+  height: 100vh;
+}
+
+#section-about,
+#section-news {
+  padding: 4%;
+}
+
+#section-intro {
+  display: block;
+}
+
+#section-news,
+#section-about {
+  @include flexbox(space-evenly, center, column);
+}
+
+//Para não aparecer a barra de scroll
+::-webkit-scrollbar {
+  display: none;
+}

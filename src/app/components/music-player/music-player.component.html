@@ -1,0 +1,70 @@
+<div class="container-player">
+
+    <!-- Left Side -->
+    <div id="left-side">
+
+        <div class="about-track">
+            <!-- Track Cover Image -->
+            <div class="track-cover"></div>
+
+            <!-- Track Info -->
+            <div class="music-info">
+                <h1 class="artist">Artist Name</h1>
+                <h2 class="track">Track Name</h2>
+                <p class="album">Album or Playlist</p>
+            </div>
+        </div>
+        <!-- Actions Left (Like, Share) -->
+        <div class="actions-left">
+            <!-- Icon Heart (Add to favorites) -->
+            <app-my-svgs [svgName]="SvgNameEnum.HEART" [width]="'16px'" [height]="'16px'">
+            </app-my-svgs>
+            <!-- Icon Share -->
+            <app-my-svgs [svgName]="SvgNameEnum.SHARE" [width]="'16px'" [height]="'16px'">
+            </app-my-svgs>
+        </div>
+    </div>
+
+    <!-- Track Progress -->
+    <div class="track-progress">
+        <p class="track-time progress">00:00</p>
+        <div class="progress-bar"></div>
+        <p class="track-time total">02:00</p>
+    </div>
+
+    <!-- Right Side -->
+    <div id="right-side">
+
+        <div class="actions">
+            <!-- Icon Previous Track -->
+            <app-my-svgs [svgName]="SvgNameEnum.PREVIOUS" [width]="'16px'" [height]="'16px'">
+            </app-my-svgs>
+            <!-- Icon Play-->
+            <button>
+                <app-my-svgs id="icon-play" [svgName]="SvgNameEnum.PLAY" [width]="'18px'" [height]="'22px'">
+                </app-my-svgs>
+            </button>
+            <!-- Icon Next Track -->
+            <app-my-svgs [svgName]="SvgNameEnum.NEXT" [width]="'16px'" [height]="'16px'">
+            </app-my-svgs>
+        </div>
+
+        <audio src="../../../assets/musics/Simon R & Jordana- Colorful love.mp3" id="audio"></audio>
+
+        <div class="actions-right">
+            <!-- Icon Suffle Playlist -->
+            <app-my-svgs [svgName]="SvgNameEnum.SUFFLE" [width]="'16px'" [height]="'16px'">
+            </app-my-svgs>
+            <!-- Icon Reapeat Track -->
+            <app-my-svgs [svgName]="SvgNameEnum.REPEAT" [width]="'16px'" [height]="'16px'">
+            </app-my-svgs>
+
+        </div>
+
+        <!-- Volume Controler -->
+        <div class="volume">
+            <app-my-svgs [svgName]="SvgNameEnum.VOLUME" [width]="'16px'" [height]="'16px'">
+            </app-my-svgs>
+        </div>
+    </div>
+</div>

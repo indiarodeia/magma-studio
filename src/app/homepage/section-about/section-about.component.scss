@@ -1,0 +1,13 @@
+@import "../../../variables";
+
+.article-about-container {
+  @include flexbox(space-between, center);
+}
+
+.title {
+  align-self: flex-start;
+}
+
+app-article-about {
+  width: 50%;
+}

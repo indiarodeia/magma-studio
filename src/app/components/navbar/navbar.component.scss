@@ -1,0 +1,32 @@
+@import "../../../variables";
+
+//Nav Bar
+header {
+  @include flexbox(center, center);
+  height: 50px;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.1);
+  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.5);
+
+  .nav {
+    @include flexbox(space-between, center);
+    width: 95%;
+    color: #ffff;
+
+    ul {
+      @include flexbox(space-between, center);
+      @include font($primary-font, $light, $font-s, #eeeeee);
+      list-style: none;
+      width: 25%;
+      text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+
+      cursor: pointer;
+
+      li:hover {
+        transform: scale3d(1.1, 1.1, 1.1);
+        transition: transform 0.4s;
+        color: #fff;
+      }
+    }
+  }
+}

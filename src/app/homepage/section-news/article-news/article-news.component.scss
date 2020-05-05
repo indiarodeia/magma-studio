@@ -1,0 +1,19 @@
+@import "../../../../variables";
+
+.article-news {
+    @include flexbox(flex-start, flex-start, column);
+    margin-left: 10%;
+
+    .subtitle {
+        @include font($primary-font, $regular, 24px, #ffffff);
+        margin-bottom: 1%;
+    }
+    .article-data {
+        @include font($primary-font, $light, $font-xxs, #ffffff);
+        margin-bottom: 2%;
+    }
+
+    .button.centered {
+        align-self: center;
+    }
+}
