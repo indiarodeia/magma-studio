@@ -21,6 +21,16 @@
 
 #balls2 {
   @include balls(20%, 240px);
-  top: 16%;
+  top: 20%;
   left: 17%;
+}
+
+#magma1{
+  width: 80%;
+    max-width: 200px;
+    height: auto;
+    left: 23%;
+    position: absolute;
+    top: 7%;
+    z-index: -1;
 }

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Music } from 'src/app/model/music';
+import { MusicService } from '../services/music.service';
+import { MusicPlayerComponent } from '../components/music-player/music-player.component';
 
 @Component({
   selector: 'app-music',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild (MusicPlayerComponent, {static: false}) musicPlayer: MusicPlayerComponent;
+
+  musicIndex: Number;
+
+  constructor(
+  ) { }
 
   ngOnInit() {
   }
 
+  sendMusic(musicIndex: Number): void {
+    this.musicIndex = musicIndex;
+    this.musicPlayer.loadMusicByIndex(musicIndex); 
+    console.log('music parent ' + musicIndex);
+  }
 }

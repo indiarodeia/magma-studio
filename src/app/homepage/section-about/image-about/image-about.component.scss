@@ -1,3 +1,11 @@
 .image-mask {
-  clip-path: url("#svg-img-mask");
+  max-width: 450px;
+  margin-right: 10%;
+  margin-right: 5%;
+  clip-path: ellipse(50% 49% at 50% 50%);
+  
 }
+    #studio-img{
+      height: auto;
+      width: 100%;
+    }

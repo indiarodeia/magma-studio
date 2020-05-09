@@ -6,7 +6,7 @@
 
   .article-buttons {
     width: 50%;
-    @include flexbox(space-between, center);
+    @include flexbox(center, center);
     margin: auto;
   }
 }

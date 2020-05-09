@@ -1,0 +1,20 @@
+@import "../../variables";
+
+app-background-svg{
+    max-height: 160vh;
+}
+app-section-news {
+    height: 100vh;
+    padding: 4%;
+    @include flexbox(space-evenly, center, column);
+}
+
+.wrapper-container{
+    height: 60vh;
+    padding: 4%;
+    @include flexbox(space-evenly, flex-start);
+
+    .article-news, .visual-container{
+        width: 40%;
+    }
+}

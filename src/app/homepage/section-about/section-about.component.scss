@@ -1,7 +1,7 @@
 @import "../../../variables";
 
 .article-about-container {
-  @include flexbox(space-between, center);
+  @include flexbox(space-between, flex-start);
 }
 
 .title {

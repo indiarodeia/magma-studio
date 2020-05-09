@@ -1,7 +1,6 @@
 export class Music {
 
-    index: number;
-    filename: string;
+    url: string;
     title: string;
     artist: string;
     artist2: string;
@@ -15,10 +14,9 @@ export class Music {
 
 
     // tslint:disable-next-line: max-line-length
-    constructor(index: number, filename: string, title: string, artist: string, genre: string, duration: number, date: string, artist2?: string, album?: string, price?: number, liked?: boolean, key?: string) {
+    constructor(url: string, title: string, artist: string, genre: string, duration: number, date: string, artist2?: string, album?: string, price?: number, liked?: boolean, key?: string) {
 
-        this.index = index;
-        this.filename = filename;
+        this.url = url;
         this.title = title;
         this.artist = artist;
         this.artist2 = artist2;
@@ -29,4 +27,7 @@ export class Music {
         this.liked = liked || false;
         this.key = key;
     }
+
 }
+
+

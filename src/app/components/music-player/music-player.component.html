@@ -9,16 +9,20 @@
 
             <!-- Track Info -->
             <div class="music-info">
-                <h1 class="artist">Artist Name</h1>
-                <h2 class="track">Track Name</h2>
-                <p class="album">Album or Playlist</p>
+                <h1 class="artist">{{ selectedMusic.artist }} {{ selectedMusic.artist2 }}</h1>
+                <h2 class="track">{{ selectedMusic.title }}</h2>
+                <p class="album">{{ selectedMusic.album }}</p>
             </div>
         </div>
         <!-- Actions Left (Like, Share) -->
         <div class="actions-left">
+
             <!-- Icon Heart (Add to favorites) -->
-            <app-my-svgs [svgName]="SvgNameEnum.HEART" [width]="'16px'" [height]="'16px'">
-            </app-my-svgs>
+            <button (click)="likeMusic()">
+                <app-my-svgs [svgName]="SvgNameEnum.HEART" [width]="'16px'" [height]="'16px'">
+                </app-my-svgs>
+            </button>
+
             <!-- Icon Share -->
             <app-my-svgs [svgName]="SvgNameEnum.SHARE" [width]="'16px'" [height]="'16px'">
             </app-my-svgs>
@@ -29,7 +33,7 @@
     <div class="track-progress">
         <p class="track-time progress">00:00</p>
         <div class="progress-bar"></div>
-        <p class="track-time total">02:00</p>
+        <p class="track-time total">{{ selectedMusic.duration }}</p>
     </div>
 
     <!-- Right Side -->
@@ -37,19 +41,25 @@
 
         <div class="actions">
             <!-- Icon Previous Track -->
-            <app-my-svgs [svgName]="SvgNameEnum.PREVIOUS" [width]="'16px'" [height]="'16px'">
-            </app-my-svgs>
-            <!-- Icon Play-->
-            <button>
-                <app-my-svgs id="icon-play" [svgName]="SvgNameEnum.PLAY" [width]="'18px'" [height]="'22px'">
+            <button (click)="previousMusic()">
+                <app-my-svgs [svgName]="SvgNameEnum.PREVIOUS" [width]="'16px'" [height]="'16px'">
                 </app-my-svgs>
             </button>
+            <!-- Icon Play-->
+            <button (click)="musicIsPlaying === true ? pauseMusic() : playMusic()">
+                <app-my-svgs id="icon-play" [svgName]="musicIsPlaying === true ? SvgNameEnum.PAUSE : SvgNameEnum.PLAY"
+                    [width]="'18px'" [height]="'22px'">
+                </app-my-svgs>
+            </button>
+
             <!-- Icon Next Track -->
-            <app-my-svgs [svgName]="SvgNameEnum.NEXT" [width]="'16px'" [height]="'16px'">
-            </app-my-svgs>
+            <button (click)="nextMusic()">
+                <app-my-svgs [svgName]="SvgNameEnum.NEXT" [width]="'16px'" [height]="'16px'">
+                </app-my-svgs>
+            </button>
         </div>
 
-        <audio src="../../../assets/musics/Simon R & Jordana- Colorful love.mp3" id="audio"></audio>
+        <audio [src]="url" id="audio"></audio>
 
         <div class="actions-right">
             <!-- Icon Suffle Playlist -->

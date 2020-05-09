@@ -2,7 +2,7 @@
 
 #section-music-list {
     width: 80%;
-    margin: auto;
+    margin: 5% auto;
     .header-music-list {
         @include flexbox(space-between, center);
 
@@ -97,14 +97,17 @@
     //GRID VIEW
 
     .grid-view-container {
-        margin-bottom: 10%;
+        margin: 4% auto;
         @include flexbox(flex-start, center);
         flex-wrap: wrap;
+
         .grid-item {
             @include flexbox(flex-start, center, column);
             height: 210px;
             width: 160px;
+            margin: 0 5% 5% 0;
             filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.25));
+            
 
             //Cover track
             .grid-item-cover {
@@ -141,6 +144,10 @@
                     p {
                         @include font($primary-font, $light, $font-xxs, #ffffff);
                         line-height: 14px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        text-align: left;
+                        width: 124px;
                     }
                 }
                 .grid-heart-button {

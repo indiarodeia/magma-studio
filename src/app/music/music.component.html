@@ -1,3 +1,4 @@
-<app-section-news></app-section-news>
 
-<app-music-list></app-music-list>
+<app-music-list (musicClicked)="sendMusic($event)"></app-music-list>
+
+<app-music-player [selectedMusic]="music"></app-music-player>

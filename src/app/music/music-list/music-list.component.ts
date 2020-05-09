@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { SvgNameEnum } from 'src/app/model/enum';
+import { MusicService } from 'src/app/services/music.service';
+import { Music } from 'src/app/model/music';
 
 @Component({
   selector: 'app-music-list',
@@ -10,9 +12,29 @@ export class MusicListComponent implements OnInit {
 
   SvgNameEnum = SvgNameEnum;
 
-  constructor() { }
+  availableMusics: Music[];
+  isOnListView: boolean;
+
+  @Output()
+  musicClicked = new EventEmitter<Number>();
+
+  constructor(
+    private service: MusicService
+  ) {
+    this.availableMusics = this.service.getMusics();
+    this.isOnListView = true;
+  }
+
 
   ngOnInit() {
+  }
+
+  setMusicByIndex(musicIndex: number): void {
+    this.musicClicked.emit(musicIndex);
+  }
+
+  toggleListGridView(): void {
+    this.isOnListView = !this.isOnListView;
   }
 
 }
