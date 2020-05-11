@@ -2,7 +2,6 @@
 
 .article-news-container {
     @include flexbox(center, flex-start);
-    margin-bottom: 10%;
 }
 
 app-article-news {

@@ -5,11 +5,12 @@
 
         <div class="about-track">
             <!-- Track Cover Image -->
-            <div class="track-cover"></div>
+            <img class="track-cover" src="../../../assets/images/cover.jpg">
 
             <!-- Track Info -->
             <div class="music-info">
-                <h1 class="artist">{{ selectedMusic.artist }} {{ selectedMusic.artist2 }}</h1>
+                <h1 class="artist">{{ selectedMusic.artist }} <span *ngIf="selectedMusic.artist2 !null">&
+                        {{ selectedMusic.artist2 }}</span></h1>
                 <h2 class="track">{{ selectedMusic.title }}</h2>
                 <p class="album">{{ selectedMusic.album }}</p>
             </div>
@@ -19,21 +20,24 @@
 
             <!-- Icon Heart (Add to favorites) -->
             <button (click)="likeMusic()">
-                <app-my-svgs [svgName]="SvgNameEnum.HEART" [width]="'16px'" [height]="'16px'">
+                <app-my-svgs [svgName]="musicIsLiked ? SvgNameEnum.HEART_ORANGE : SvgNameEnum.HEART" [width]="'16px'"
+                    [height]="'16px'">
                 </app-my-svgs>
             </button>
 
             <!-- Icon Share -->
-            <app-my-svgs [svgName]="SvgNameEnum.SHARE" [width]="'16px'" [height]="'16px'">
-            </app-my-svgs>
+            <!-- <app-my-svgs [svgName]="SvgNameEnum.SHARE" [width]="'16px'" [height]="'16px'">
+            </app-my-svgs> -->
         </div>
     </div>
 
     <!-- Track Progress -->
     <div class="track-progress">
         <p class="track-time progress">00:00</p>
-        <div class="progress-bar"></div>
-        <p class="track-time total">{{ selectedMusic.duration }}</p>
+        <div id="progressContainer" (click)="setProgressBar($event)" #progressContainer >
+        <div id="progress-bar" #progressBar></div>
+        </div>
+        <p class="track-time total">0{{ selectedMusic.duration }}</p>
     </div>
 
     <!-- Right Side -->
@@ -46,8 +50,8 @@
                 </app-my-svgs>
             </button>
             <!-- Icon Play-->
-            <button (click)="musicIsPlaying === true ? pauseMusic() : playMusic()">
-                <app-my-svgs id="icon-play" [svgName]="musicIsPlaying === true ? SvgNameEnum.PAUSE : SvgNameEnum.PLAY"
+            <button (click)="musicIsPlaying ? pauseMusic() : playMusic()">
+                <app-my-svgs id="icon-play" [svgName]="musicIsPlaying ? SvgNameEnum.PAUSE : SvgNameEnum.PLAY"
                     [width]="'18px'" [height]="'22px'">
                 </app-my-svgs>
             </button>
@@ -59,22 +63,28 @@
             </button>
         </div>
 
-        <audio [src]="url" id="audio"></audio>
+        <audio [src]="url" (timeupdate)="updateProgressBar()" (ended)="audioEnded()" id="audio" #audioEl></audio>
 
         <div class="actions-right">
-            <!-- Icon Suffle Playlist -->
-            <app-my-svgs [svgName]="SvgNameEnum.SUFFLE" [width]="'16px'" [height]="'16px'">
-            </app-my-svgs>
-            <!-- Icon Reapeat Track -->
-            <app-my-svgs [svgName]="SvgNameEnum.REPEAT" [width]="'16px'" [height]="'16px'">
-            </app-my-svgs>
 
+            <!-- Icon Suffle Playlist -->
+            <button (click)="suffleMusic()">
+                <app-my-svgs [svgName]="SvgNameEnum.SUFFLE" [width]="'16px'" [height]="'16px'">
+                </app-my-svgs>
+            </button>
+
+            <!-- Icon Reapeat Track -->
+            <button (click)="repeatMusic()">
+                <app-my-svgs [svgName]="!repeatMode ? SvgNameEnum.REPEAT : SvgNameEnum.REPEAT_ORANGE" [width]="'16px'" [height]="'16px'">
+                </app-my-svgs>
+            </button>
         </div>
 
         <!-- Volume Controler -->
-        <div class="volume">
-            <app-my-svgs [svgName]="SvgNameEnum.VOLUME" [width]="'16px'" [height]="'16px'">
+        <button class="volume" (click)="muteMusic()">
+            <app-my-svgs [svgName]="musicIsMute ? SvgNameEnum.MUTE : SvgNameEnum.VOLUME" [width]="'16px'"
+                [height]="'16px'">
             </app-my-svgs>
-        </div>
+        </button>
     </div>
 </div>

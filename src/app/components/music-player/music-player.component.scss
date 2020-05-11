@@ -50,13 +50,21 @@
     .track-time {
       @include font($primary-font, $light, 11px, #ffffff);
     }
+
     .progress {
       color: $orange-magma;
     }
-    .progress-bar {
-      height: 1.5px;
+    #progressContainer{
       width: 80%;
-      background-color: white;
+      height: 4px;
+      background-color: $orange-magma;
+      border-radius: 20%;
+
+      #progress-bar {
+        width: 0%;
+        height: 100%;
+        background-color: #ffffff;
+      }
     }
   }
 

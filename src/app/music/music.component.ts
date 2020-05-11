@@ -10,7 +10,7 @@ import { MusicPlayerComponent } from '../components/music-player/music-player.co
 })
 export class MusicComponent implements OnInit {
 
-  @ViewChild (MusicPlayerComponent, {static: false}) musicPlayer: MusicPlayerComponent;
+  @ViewChild(MusicPlayerComponent, { static: false }) musicPlayer: MusicPlayerComponent;
 
   musicIndex: Number;
 
@@ -22,7 +22,6 @@ export class MusicComponent implements OnInit {
 
   sendMusic(musicIndex: Number): void {
     this.musicIndex = musicIndex;
-    this.musicPlayer.loadMusicByIndex(musicIndex); 
-    console.log('music parent ' + musicIndex);
+    this.musicPlayer.loadMusicByIndex(musicIndex);
   }
 }

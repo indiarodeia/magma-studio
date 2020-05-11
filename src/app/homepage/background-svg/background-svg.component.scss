@@ -24,6 +24,34 @@
   top: 20%;
   left: 17%;
 }
+#balls3{
+  @include balls(20%, 240px);
+  top: 60%;
+    right: 8%;
+}
+#balls4{
+  @include balls(20%, 240px);
+  top: 112%;
+  left: -1%;
+}
+#balls5{
+  @include balls(20%, 160px);
+  top: 180%;
+    right: 26%;
+    z-index: 1;
+
+}
+#balls6{
+  @include balls(20%, 450px);
+  top: 272%;
+  right: 0%;
+}
+#balls7{
+  @include balls(20%, 240px);
+  top: 20%;
+  left: 17%;
+}
+
 
 #magma1{
   width: 80%;
@@ -33,4 +61,22 @@
     position: absolute;
     top: 7%;
     z-index: -1;
+}
+#magma3{
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  position: absolute;
+}
+#magma4{
+  width: 88%;
+  position: absolute;
+  top: 174%;
+  z-index: -2;
+}
+#magma5{
+  position: absolute;
+  z-index: -2;
+  top: 230%;
+  width: 100%;
 }

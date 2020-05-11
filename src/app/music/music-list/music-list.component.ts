@@ -16,7 +16,7 @@ export class MusicListComponent implements OnInit {
   isOnListView: boolean;
 
   @Output()
-  musicClicked = new EventEmitter<Number>();
+  musicClicked = new EventEmitter<number>();
 
   constructor(
     private service: MusicService
@@ -37,4 +37,7 @@ export class MusicListComponent implements OnInit {
     this.isOnListView = !this.isOnListView;
   }
 
+  getMusicLiked(musicIndex): boolean {
+    return this.service.getMusicByIndex(musicIndex).liked;
+  }
 }

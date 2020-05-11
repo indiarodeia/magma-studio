@@ -8,8 +8,10 @@ export enum SvgNameEnum {
   PLAY_CIRCLE = 'Play Circle',
   PAUSE = 'Pause',
   REPEAT = 'Repeat',
+  REPEAT_ORANGE = 'Repeat Orange',
   SUFFLE = 'Suffle',
   HEART = 'Heart',
+  HEART_ORANGE = 'Heart Orange',
   SHARE = 'Share',
   LIST = 'List',
   GRID = 'Grid'

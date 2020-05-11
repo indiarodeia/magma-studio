@@ -13,7 +13,7 @@
 
         <div class="left-side">
             <button (click)="toggleListGridView()" class="list-grid-view">
-                <app-my-svgs [svgName]="isOnListView === true ? SvgNameEnum.GRID :  SvgNameEnum.LIST" [width]="'24px'" [height]="'22px'">
+                <app-my-svgs [svgName]="isOnListView ? SvgNameEnum.GRID :  SvgNameEnum.LIST" [width]="'24px'" [height]="'22px'">
                 </app-my-svgs>
             </button>
         </div>
@@ -35,14 +35,14 @@
             <tr *ngFor="let music of availableMusics; let musicIndex = index;">
                 <td class="img"><img class="cover-img" src="../../../assets/images/cover.jpg"></td>
                 <td class="cover-and-title">{{ music.title }}</td>
-                <td class="artist">{{ music.artist }}</td>
+                <td class="artist">{{ music.artist }} <span *ngIf="music.artist2 !null">& {{ music.artist2 }}</span></td>
                 <td>{{ music.album }}</td>
                 <td>{{ music.genre }}</td>
                 <td>{{ music.date }}</td>
                 <td class="actions">
                     <button class="button-buy">Buy</button>
                     <button>
-                        <app-my-svgs [svgName]="SvgNameEnum.HEART" [width]="'14px'" [height]="'14px'">
+                        <app-my-svgs [svgName]="getMusicLiked(musicIndex) === true ? SvgNameEnum.HEART_ORANGE : SvgNameEnum.HEART" [width]="'14px'" [height]="'14px'">
                         </app-my-svgs>
                     </button>
                     <button (click)="setMusicByIndex(musicIndex)">
